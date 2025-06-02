@@ -14,5 +14,7 @@ test('@env_test Test with environment', async ({ page }) => {
     await page.setExtraHTTPHeaders({ "Authorization": `Basic ${encodedCredentials}` });
 
     await page.goto("https://practice.cydeo.com/basic_auth");
+    
+    await page.waitForTimeout(3000);
 });
 
