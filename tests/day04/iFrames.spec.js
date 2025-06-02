@@ -6,7 +6,7 @@ test('iFrame test', async ({ page }) => {
     let iFrame1 = page.frameLocator("#mce_0_ifr");
     let textBody = iFrame1.locator('#tinymce');
     //await textBody.press("Control+A","Backspace");
-    //await textBody.clear();
+    await textBody.clear();
     // If you use type you should first delete and then write. 
     // Using fill delete all text first.
     await textBody.fill('Hello, iFrame!');
